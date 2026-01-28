@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyril Euan George-Wilson | Portfolio</title>
+    <style>
+        :root {
+            --black: #050505;
+            --dark-gray: #121212;
+            --gold: #d4af37; /* Metallic Gold */
+            --gold-light: #f1c40f;
+            --text: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, align-content: space-around;ns-serif; }
+        body { background-color: var(--black); color: var(--text); line-height: 1.6; scroll-behavior: smooth; }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: rgba(5, 5, 5, 0.9);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .logo { color: var(--gold); font-weight: bold; font-size: 1.4rem; letter-spacing: 2px; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { color: var(--text); text-decoration: none; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s; }
+        nav ul li a:hover { color: var(--gold); text-shadow: 0 0 8px var(--gold); }
+
+        /* Hero Section */
+        header {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            padding: 0 10%; background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+        }
+        .hero-content { text-align: center; }
+        .profile-img {
+            width: 200px; height: 200px; border-radius: 50%;
+            border: 4px solid var(--gold); object-fit: cover;
+            margin-bottom: 20px; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        header h1 { font-size: 3rem; color: var(--gold); margin-bottom: 10px; }
+        header p { font-size: 1.2rem; color: #aaa; margin-bottom: 30px; }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 35px; border: 2px solid var(--gold);
+            background: transparent; color: var(--gold);
+            text-transform: uppercase; font-weight: bold; cursor: pointer;
+            transition: 0.4s; border-radius: 5px; text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover { background: var(--gold); color: var(--black); box-shadow: 0 0 15px var(--gold); }
+
+        /* Container & Grid */
+        .container { padding: 100px 10%; }
+        h2 { color: var(--gold); text-align: center; margin-bottom: 50px; font-size: 2rem; text-transform: uppercase; letter-spacing: 4px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card {
+            background: var(--dark-gray); padding: 30px; border-radius: 12px;
+            border-bottom: 3px solid transparent; transition: 0.4s;
+        }
+        .card:hover { 
+            transform: translateY(-10px); border-bottom: 3px solid var(--gold);
+            background: #1a1a1a;
+        }
+        .card h3 { color: var(--gold); margin-bottom: 15px; }
+        .date { color: #888; font-size: 0.85rem; display: block; margin-bottom: 10px; font-weight: bold; }
+
+        /* Skills */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+        .skill-tag { 
+            background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold);
+            padding: 8px 20px; border-radius: 50px; color: var(--gold); font-size: 0.9rem;
+        }
+
+        /* Footer & Watermark */
+        footer { 
+            background: #000; padding: 60px 10% 20px; text-align: center; 
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .watermark {
+            font-family: 'Courier New', monospace; color: #222;
+            font-size: 2.5rem; letter-spacing: 15px; text-transform: uppercase;
+            margin-top: 40px; pointer-events: none; user-select: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            nav ul { display: none; } /* Mobile simplicity */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CRACKILSON</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <img src="profile.jpg" alt="Cyril Euan George-Wilson" class="profile-img">
+            <h1>Cyril Euan George-Wilson</h1>
+            <p>IT Specialist | HR Expert | Quality Assurance Professional</p>
+            <a href="#contact" class="btn">Connect With Me</a>
+        </div>
+    </header>
+
+    <section class="container" id="experience">
+        <h2>Professional Experience</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="date">2025 - 2026</span>
+                <h3>School Quality Assurance Officer</h3>
+                <p>Ministry of Basic and Senior Secondary Education / UNICEF</p>
+                <small>Foundation Literacy and Numeracy</small>
+            </div>
+            <div class="card">
+                <span class="date">2024</span>
+                <h3>Administrative Officer</h3>
+                <p>West End Clinic</p>
+            </div>
+            <div class="card">
+                <span class="date">2023 - 2024</span>
+                <h3>Project Officer</h3>
+                <p>Sensitech Innovation Hub, Spur Road</p>
+            </div>
+            <div class="card">
+                <span class="date">2022 - 2023</span>
+                <h3>Safety and Security Officer</h3>
+                <p>All Petroleum Products, Kissy Dockyard</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="education" style="background-color: #080808;">
+        <h2>Educational Background</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Bsc Hons Information Technology</h3>
+                <p>Limkokwing University, Sierra Leone</p>
+            </div>
+            <div class="card">
+                <h3>Diploma in Human Resources</h3>
+                <p>Association of Business Executives, UK</p>
+            </div>
+            <div class="card">
+                <h3>Project Management (Cert)</h3>
+                <p>University of California, Irvine</p>
+            </div>
+            <div class="card">
+                <h3>Preparing & Managing HR (Cert)</h3>
+                <p>University of Minnesota</p>
+            </div>
+            <div class="card">
+                <h3>Secondary Education</h3>
+                <p>The Sierra Leone Grammar School</p>
+            </div>
+            <div class="card">
+                <h3>Primary Education (NPSE)</h3>
+                <p>Tower Hill Municipal School</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Skills & Abilities</h2>
+        <div class="skills-grid">
+            <div class="skill-tag">Systems Administration</div>
+            <div class="skill-tag">HR Strategy</div>
+            <div class="skill-tag">Project Coordination</div>
+            <div class="skill-tag">Quality Assurance</div>
+            <div class="skill-tag">Safety & Security</div>
+            <div class="skill-tag">Data Management</div>
+        </div>
+    </section>
+
+    <section class="container" id="contact" style="text-align: center;">
+        <h2>Contact Information</h2>
+        <div class="card" style="display: inline-block; min-width: 320px;">
+            <p><strong>Address:</strong> 31B Thunder Hill Road, Kissy</p>
+            <p><strong>Email:</strong> <a href="mailto:gwennemay30@gmail.com" style="color: var(--gold);">gwennemay30@gmail.com</a></p>
+            <p><strong>Phone:</strong> 034308989 / 078216141</p>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #333;">
+            <p><em>References available upon request.</em></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Cyril Euan George-Wilson. All Rights Reserved.</p>
+        <div class="watermark">crackilson</div>
+    </footer>
+
+</body>
+</html>
